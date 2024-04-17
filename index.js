@@ -1,10 +1,13 @@
-let x = null;
-let y = null;
+function sumNumbers() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    
+    if (isNaN(num1) || isNaN(num2)) {
+        alert('Please enter valid numbers');
+        return;
+    }
 
-function suma(x, y) {
-    x = document.getElementsById("value1").value;
-    y = document.getElementById("value2").value;
-
-    z = x + y;
-    return console.log(z)
+    let sum = num1 + num2;
+    
+    alert('The sum of ' + num1 + ' and ' + num2 + ' is ' + sum);
 }
